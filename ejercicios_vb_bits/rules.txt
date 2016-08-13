@@ -1,0 +1,30 @@
+VB 4.0|
+------.
+
+Nou: Fecha y Hora
+----
+Format: Representacion de un Numero (Decimales, etc.)
+variable=format(variable2,"#,##0.0;-#,##0.0")
+----
+Variable = Shell("Ruta_de_acceso",numero_opcion): Ejecutar un programa
+ejemplo:
+	okiz = Shell("C:\WINDOWS\CALC.EXE", 1) ' Ejecuta Calculadora.
+(el 1 indica que la ventana devuelve su foco y se ejecuta con
+	su tamaño original)
+----
+Kill: Eliminar Archivo
+	ejemplo: 
+		kill("Ruta_de_acceso")
+-------------------------------------------------------------------------------
+VB32 provocó un fallo de página no válida en el 
+módulo VB32.EXE de 0137:0042ea1f.
+Registros:
+EAX=00000003 CS=0137 EIP=0042ea1f EFLGS=00010206
+EBX=00000000 SS=013f ESP=0074f51c EBP=0074f564
+ECX=0098e41c DS=013f ESI=0052f9a8 FS=1b67
+EDX=0098e41c ES=013f EDI=004cf9c0 GS=0000
+Bytes en CS:EIP:
+39 31 75 25 83 f8 01 75 2a 52 e8 cd 2e fd ff c7 
+Volcado de pila:
+bff3249f 0098dbbc 009876e0 00421ed5 0052f9a8 0098c3d0 009c0568 009876e0 7ffcc000 00523684 00000000 00000000 00000000 009c049c 0faec0cf 00000000 
+-----------------------------------------

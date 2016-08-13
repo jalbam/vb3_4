@@ -1,0 +1,41 @@
+                 Domain Description v1.0 [ESP]
+
+  Viernes, 18 de agosto del 2000 a las 4:29 - (18/08/2000 [4:29])
+
+                     [Versión en Español]
+
+ ------------------------------------------------------------------
+ 
+ Archivos adjuntos: dnsdescr.exe (21,5kb - ejecutable) / leeme.txt
+
+ Este sencillo programa está destinado a mostrar información sobre
+ todos los dominios actuales disponibles en Internet.
+
+ Surge con el objetivo de poder ser integrado en programas donde
+ pueda ser útil obtener una información de este tipo y de forma
+ verdaderamente rápida. Como por ejemplo Scripts del mIRC, etc.
+
+ Su manejo es muy sencillo y su entorno pretende ser lo más compacto
+ posible. No consume apenas memoria y se ejecuta muy rápido. Se
+ puede minimizar.
+
+ Como cualquier otro programa creado en Visual Basic 4.0 de 32bits,
+ necesita las librerias de este (dll's) y Windows 95 o superior para
+ ser ejecutado y funcionar correctamente. Estas librerias están en el
+ archivo vb40032.dll y se instalan depositando este en
+ \windows\system\ (o en el directorio donde se instaló Windows 9x).
+
+ Un ZIP con el archivo se puede encontrar directamente en la URL:
+ http://westwood.fortunecity.com/saks/463/programa/vb40032.zip
+
+ ------------------------------------------------------------------
+
+       Dedicado a todos los lectores de GüebZine y a ti (;
+               Gracias por utilizar este software
+
+                           .A-Kristo.
+               http://www.emumania.com/guebzine
+                      jalbam@tinet.fut.es
+
+  (se agradecen sugerencias, críticas y comentarios de todo tipo)
+

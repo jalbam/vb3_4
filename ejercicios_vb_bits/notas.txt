@@ -1,0 +1,2 @@
+Printer.Propiedad_Fuente <-Impresora y sistema
+Screen.Propiedad_Fuente <-Sistema

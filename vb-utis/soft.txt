@@ -1,0 +1,22 @@
+-JAM Utilities-
+
+ 1] Easy Colors                Convinaciones de Colores
+ 2] Eurancio                   Conversor Moneda Europea a Euro
+ 3] ASCII                      Muestra Caracter y codigo ASCII
+ 4] Multi Conversor            Cambia valor a Decimal, Hexadecimal, Octal, etc.
+ 5] Rapid Label                Crea Etiquetas para tus cosas.
+ 6] Cyber Text Effects         Crear curiosos efectos de Texto.
+ 7] Super Zopas                Realiza Sopas de Letras, Cruzigramas...
+ 8] Data Controller            Controla, Organiza, Archiva, etc. Datos
+ 9] Veni Vidi Cryptos          Encripta y protege con clave. Desencripta con clave.
+10] Graphic Express            Crea diagramas de barras, tartas...
+11] Visual HTML Editor         Haz tu propia pagina web.
+12] Progressive Conversation   Frases Aleatorias segun el dia y la hora. 
+13] Cyber Agenda               Organizate. Tiene alarma.   
+14] Student Controller         Controlar las notas de los estudiantes es facil. Virtual Assignat.
+15] Tabla BOOM!                Para aprender tablas de multiplicar, dividir...
+16] Conta-Phonica              Calcula y hace factura de lo que pagas en Internet.
+17] Restant Days               Muestra dias, horas, segundos... restantes para una fecha.
+18] Happy Death                Mediante un test calcula tu tiempo de vida restante.
+19] Spanish IUNM               Visualiza y crea archivos con HTML españonalizado. 
+20] Virtual Maqueta            Crea planos, etc. mediante figuras. Imprime papael para doblar.

@@ -1,0 +1,11 @@
+[Keyboard]
+layout=kbdsp.kbd
+
+[Intl]
+ACP=1252
+OEMCP=850
+SystemLocale=00000c0a
+
+[boot]
+*DisplayFallback=0
+

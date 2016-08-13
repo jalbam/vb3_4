@@ -1,0 +1,506 @@
+#include <conio.h>
+#include <stdio.h>
+#include <string.h>
+
+/* 1.200, 1.500 y 1.800 */
+	/* 120, 150, 180 */
+/* 1 Caja = 10 Pa工elos */
+
+/* Cantidad de Pa工elos... -> */
+/* 1.200pts/caja: 100 pa工elos */
+/* 1.500pts/caja: 150 pa工elos */
+/* 1.800pts/caja: 200 pa工elos */
+
+
+char ventana_principal[6800],ventanita[6800],ventanita2[6800];
+char categoria[30], modo[30], cargo[20];
+float pvp,cantidad,total=0;
+float pagar,pagarlo,cargochu;
+
+int ca1200=100, ca1500=150, ca1800=180;
+int ca120, ca150, ca180, kktua;
+int paso=0;
+float descuento,totalpiko;
+
+float pepe, kambio, totalchu;
+
+main()
+{
+pagarlo=0.0;
+textbackground(4);
+clrscr();
+
+window(16,6,31,13);textbackground(7);clrscr();
+window(15,5,30,12);textbackground(6);clrscr();
+
+textcolor(11);
+
+gotoxy(4,2);cprintf("1) Cajas");
+gotoxy(4,4);cprintf("2) Sueltos");
+textcolor(13);
+gotoxy(4,7);cprintf("3) Pagar");
+
+gettext(1,1,80,25,ventana_principal);
+
+main2();
+
+}
+
+main2()
+{
+char opcion;
+puttext(1,1,80,25,ventana_principal);
+
+opcion=getch();
+
+switch(opcion)
+	{
+		case '1':{cajas();break;}
+		case '2':{sueltos();break;}
+		case '3':{salir();break;}
+		default:main();
+	}
+
+main2();
+
+}
+
+cajas2()
+{
+puttext(1,1,80,25,ventanita);
+cajas();
+}
+
+cajas()
+{
+char opcion;
+window(6,4,17,10);textbackground(0);clrscr();
+window(5,3,16,9);textbackground(13);clrscr();
+
+textcolor(9);
+gotoxy(2,2);cprintf("1) 1200pts");
+gotoxy(2,3);cprintf("2) 1500pts");
+gotoxy(2,4);cprintf("3) 1800pts");
+textcolor(13);
+gotoxy(2,6);cprintf("4) Volver");
+
+gettext(1,1,80,25,ventanita);
+
+opcion=getch();
+
+switch(opcion)
+	{
+		case '1':{p1200();break;}
+		case '2':{p1500();break;}
+		case '3':{p1800();break;}
+		case '4':{main2();break;}
+		default:cajas();
+	}
+
+}
+
+p1200()
+{
+char opcion;
+strcpy(categoria,"C");
+pvp=1200.0;
+strcpy(modo,"Cajas");
+
+window(10,8,21,12);textbackground(0);clrscr();
+window(9,7,20,11);textbackground(3);clrscr();
+textcolor(4);
+gotoxy(2,2);cprintf("1) Comprar");
+gotoxy(2,4);cprintf("2) Volver");
+
+
+opcion=getch();
+
+switch(opcion)
+	{
+		case '1':{comprar();break;}
+		case '2':{cajas2();break;}
+		default:p1200();
+	}
+
+}
+
+p1500()
+{
+char opcion;
+strcpy(categoria,"B");
+pvp=1500.0;
+strcpy(modo,"Cajas");
+
+window(10,8,21,12);textbackground(0);clrscr();
+window(9,7,20,11);textbackground(3);clrscr();
+textcolor(4);
+gotoxy(2,2);cprintf("1) Comprar");
+gotoxy(2,4);cprintf("2) Volver");
+
+
+opcion=getch();
+
+switch(opcion)
+	{
+		case '1':{comprar();break;}
+		case '2':{cajas2();break;}
+		default:p1500();
+	}
+}
+
+p1800()
+{
+char opcion;
+strcpy(categoria,"A");
+pvp=1800.0;
+strcpy(modo,"Cajas");
+
+window(10,8,21,12);textbackground(0);clrscr();
+window(9,7,20,11);textbackground(3);clrscr();
+textcolor(4);
+gotoxy(2,2);cprintf("1) Comprar");
+gotoxy(2,4);cprintf("2) Volver");
+
+
+opcion=getch();
+
+switch(opcion)
+	{
+		case '1':{comprar();break;}
+		case '2':{cajas2();break;}
+		default:p1800();
+	}
+}
+
+sueltos2()
+{
+puttext(1,1,80,25,ventanita);
+sueltos();
+}
+
+
+sueltos()
+{
+char opcion;
+window(6,4,17,10);textbackground(0);clrscr();
+window(5,3,16,9);textbackground(13);clrscr();
+
+textcolor(9);
+gotoxy(2,2);cprintf("1) 120pts");
+gotoxy(2,3);cprintf("2) 150pts");
+gotoxy(2,4);cprintf("3) 180pts");
+textcolor(13);
+gotoxy(2,6);cprintf("4) Volver");
+
+gettext(1,1,80,25,ventanita);
+
+opcion=getch();
+
+switch(opcion)
+	{
+		case '1':{p120();break;}
+		case '2':{p150();break;}
+		case '3':{p180();break;}
+		case '4':{main2();break;}
+		default:sueltos();
+	}
+
+}
+
+p120()
+{
+char opcion;
+strcpy(cargo,"Cargo 1");
+strcpy(categoria,"C");
+pvp=120.0;
+strcpy(modo,"Sueltos");
+
+window(10,8,21,12);textbackground(0);clrscr();
+window(9,7,20,11);textbackground(3);clrscr();
+textcolor(4);
+gotoxy(2,2);cprintf("1) Comprar");
+gotoxy(2,4);cprintf("2) Volver");
+
+
+opcion=getch();
+
+switch(opcion)
+	{
+		case '1':{comprar();break;}
+		case '2':{sueltos2();break;}
+		default:p120();
+	}
+
+}
+
+p150()
+{
+char opcion;
+strcpy(cargo,"Cargo 2");
+strcpy(categoria,"B");
+pvp=150.0;
+strcpy(modo,"Sueltos");
+
+window(10,8,21,12);textbackground(0);clrscr();
+window(9,7,20,11);textbackground(3);clrscr();
+textcolor(4);
+gotoxy(2,2);cprintf("1) Comprar");
+gotoxy(2,4);cprintf("2) Volver");
+
+
+opcion=getch();
+
+switch(opcion)
+	{
+		case '1':{comprar();break;}
+		case '2':{sueltos2();break;}
+		default:p150();
+	}
+}
+
+p180()
+{
+char opcion;
+strcpy(cargo,"Cargo 2");
+strcpy(categoria,"A");
+pvp=180.0;
+strcpy(modo,"Sueltos");
+
+window(10,8,21,12);textbackground(0);clrscr();
+window(9,7,20,11);textbackground(3);clrscr();
+textcolor(4);
+gotoxy(2,2);cprintf("1) Comprar");
+gotoxy(2,4);cprintf("2) Volver");
+
+
+opcion=getch();
+
+switch(opcion)
+	{
+		case '1':{comprar();break;}
+		case '2':{sueltos2();break;}
+		default:p180();
+	}
+}
+
+comprar()
+{
+window(10,5,23,10);textbackground(0);clrscr();
+window(9,4,22,9);textbackground(2);clrscr();
+gotoxy(2,1);printf("Precio: %.1f",pvp);
+gotoxy(2,2);printf("Categoria: %s",categoria);
+gotoxy(2,3);printf("Modo: %s",modo);
+gotoxy(2,5);printf("Cantidad: ");
+cantidad=0;
+scanf("%f",&cantidad);
+if(strcmp(modo,"Sueltos")==0)
+{
+if(strcmp(cargo,"Cargo 1")==0){cargochu=pvp*100.0/10.0;}
+if(strcmp(cargo,"Cargo 2")==0){cargochu=pvp*100.0/5.0;}
+}
+
+
+if((strcmp(modo,"Cajas")==0) && (strcmp(categoria,"C"))==0) {
+/* if(sqrt(ca1200,10)==0){}  <-[Raiz Cuadrada No!] */
+kktua=cantidad*10;
+if(ca1200<=0){
+window(11,10,55,11);textbackground(0);clrscr();
+window(10,10,55,10);textbackground(7);clrscr();
+printf("Ya no queda mas cantidad!");getch();cajas2();
+}
+if(kktua>ca1200){
+window(11,10,55,11);textbackground(0);clrscr();
+window(10,10,55,10);textbackground(7);clrscr();
+printf("\n\tInsuficientes cajas!");getch();cajas2();
+}
+if(kktua<=ca1200){ca1200-=kktua;}
+}
+
+if((strcmp(modo,"Cajas")==0) && (strcmp(categoria,"B")==0)) {
+kktua=cantidad*10;
+if(ca1500<=0){
+window(11,10,55,11);textbackground(0);clrscr();
+window(10,10,55,10);textbackground(7);clrscr();
+printf("Ya no queda mas cantidad!");getch();cajas2();
+}
+if(kktua>ca1500){
+window(11,10,55,11);textbackground(0);clrscr();
+window(10,10,55,10);textbackground(7);clrscr();
+printf("\n\tInsuficientes cajas!");getch();cajas2();
+}
+if(kktua<=ca1500){ca1500-=kktua;}
+}
+
+if((strcmp(modo,"Cajas")==0) && (strcmp(categoria,"A")==0)) {
+kktua=cantidad*10;
+if(ca1800<=0){
+window(11,10,55,11);textbackground(0);clrscr();
+window(10,10,55,10);textbackground(7);clrscr();
+printf("Ya no queda mas cantidad!");getch();cajas2();
+}
+if(kktua>ca1800){
+window(11,10,55,11);textbackground(0);clrscr();
+window(10,10,55,10);textbackground(7);clrscr();
+printf("\n\tInsuficientes cajas!");getch();cajas2();
+}
+if(kktua<=ca1800){ca1800-=kktua;}
+}
+
+if((strcmp(modo,"Sueltos")==0) && (strcmp(categoria,"C")==0)) {
+ca120=ca1200;
+if(ca1200<=0){
+window(11,10,55,11);textbackground(0);clrscr();
+window(10,10,55,10);textbackground(7);clrscr();
+printf("Ya no queda mas cantidad!");getch();sueltos2();
+}
+if(cantidad>ca120){
+window(11,10,55,11);textbackground(0);clrscr();
+window(10,10,55,10);textbackground(7);clrscr();
+printf("Insuficientes pa工elos!");getch();sueltos2();
+}
+if(cantidad<=ca120){ca1200-=cantidad;}
+}
+
+if((strcmp(modo,"Sueltos")==0) && (strcmp(categoria,"B")==0)) {
+ca150=ca1500;
+
+if(ca1500<=0){
+window(11,10,55,11);textbackground(0);clrscr();
+window(10,10,55,10);textbackground(7);clrscr();
+printf("Ya no queda mas cantidad!");getch();sueltos2();
+}
+if(cantidad>ca150){
+window(11,10,55,11);textbackground(0);clrscr();
+window(10,10,55,10);textbackground(7);clrscr();
+printf("Insuficientes pa工elos!");getch();sueltos2();
+}
+if(cantidad<=ca150){ca1500-=cantidad;}
+}
+
+if((strcmp(modo,"Sueltos")==0) && (strcmp(categoria,"A"))==0) {
+ca180=ca1800;
+
+if(ca1800<=0){
+window(11,10,55,11);textbackground(0);clrscr();
+window(10,10,55,10);textbackground(7);clrscr();
+gotoxy(1,1);cprintf("Ya no queda mas cantidad!");getch();sueltos2();
+}
+
+if(cantidad>ca180){
+window(11,10,55,11);textbackground(0);clrscr();
+window(10,10,55,10);textbackground(7);clrscr();
+gotoxy(1,1);cprintf("Insuficientes pa工elos! Quedan: %d",ca180);getch();sueltos2();
+}
+
+if(cantidad<=ca180){ca1800-=cantidad;}
+}
+
+total+=cantidad*pvp;
+cantidad=0;
+
+window(11,9,33,14);textbackground(0);clrscr();
+window(10,8,32,13);textbackground(9);clrscr();gotoxy(2,2);
+textcolor(4);
+cprintf("Importe: %.1f",total);
+
+if(strcmp(modo,"Sueltos")==0){
+
+if(total>140){gotoxy(3,3);cprintf("Porciento: 5%");cargochu=total*5/100;}
+if(total<140){gotoxy(3,3);cprintf("Porciento: 10%");cargochu=total*10/100;}
+}
+
+if(strcmp(modo,"Cajas")==0){
+if(total>140){gotoxy(3,3);cprintf("Porciento: 0%");cargochu=0;}
+}
+
+totalpiko=total+cargochu;
+
+gotoxy(3,5);cprintf("Cargo: %.1f",cargochu);
+gotoxy(3,6);cprintf("Importe Total: %.1f",totalpiko);
+getch();
+
+if(strcmp(modo,"Cajas")==0){cajas2();}
+if(strcmp(modo,"Sueltos")==0){sueltos2();}
+}
+
+
+salir()
+{
+total+=totalpiko;
+totalchu=total;
+
+pagarlo=0;
+
+
+	/*
+		DESCUENTO=TOTAL(100/PORCIENTO_DESCUENTO)
+		TOTAL=TOTAL-DESCUENTO
+	*/
+
+
+
+window(15,8,39,13);textbackground(0);clrscr();
+window(14,7,38,12);textbackground(2);clrscr();
+
+	while(pagarlo<total) {
+
+window(15,8,39,13);textbackground(0);clrscr();
+window(14,7,38,12);textbackground(2);clrscr();
+textcolor(1);
+if(total==0.0)
+	{textcolor(8);gotoxy(2,6);printf("Importe nulo.");
+	getch();exit(0);}
+
+gotoxy(2,2);cprintf(" Total a Pagar: %.1f",total);
+	if(paso==0){
+	if((total>2500.0) && (total<=5000.0)){descuento=total*5.0/100.0;gotoxy(3,3);cprintf("Descuento: 5%% ( %.1f )",descuento);}
+	if((total>5000.0) && (total<=10000.0)){descuento=total*8.0/100.0;gotoxy(3,3);cprintf("Descuento: 8%% ( %.1f )",descuento);}
+	if(total>10000.0){descuento=total*15.0/100.0;gotoxy(3,3);cprintf("Descuento: 15%% ( %.1f )",descuento);}
+	}
+paso=1;
+total-=descuento;
+totalchu=total;
+
+printf("\n\n");
+
+gotoxy(4,4);cprintf("  Pagas: ");
+
+scanf("%f",&pagar);
+
+
+if(pagar==total)
+	{textcolor(8);gotoxy(2,6);cprintf("Importe Exacto. Gracias.");
+	/*pagarlo+=pagar;*/
+	total-=pagar;
+	getch();exit(0);}
+
+if(pagar>total)
+	{textcolor(8);gotoxy(2,6);
+	pagarlo+=pagar;
+	total-=pagar;
+	pagar-=total;
+	kambio=pagarlo-totalchu;
+	cprintf("Has ofrecido de mas. Vuelta: %.1f",kambio);
+	getch();exit(0);}
+
+if(pagar<total)
+	{textcolor(8);gotoxy(2,6);
+	cprintf("Descontado del total. Por favor, evita el pago a plazos.");
+	getch();
+	pagarlo+=pagar;
+	total-=pagar;
+	if(total<=0){clrscr();printf("Has pagado todo. Buen dia.");getch();exit(0);}
+	}
+getch();
+	}
+clrscr();
+if(total==0.0)
+	{textcolor(8);gotoxy(2,6);printf("Importe nulo.");
+	getch();exit(0);}
+printf("\n\n\n\tPresiona una tecla para salir...");
+getch();
+exit(0);
+}
+
+
+

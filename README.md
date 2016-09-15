@@ -8,6 +8,9 @@ Version: no version
 - Date: 1997 to 1999 (approximately)
 
 
+![ScreenShot](screenshot.gif)
+
+
 Description
 
 Some applications made with Microsoft Visual Basic 3.0 and 4.0. Some belong to the Visual Basic course at Bits academy (known later as Instituto Microbits) in Reus city (Spain).

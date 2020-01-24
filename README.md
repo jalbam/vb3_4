@@ -1,6 +1,6 @@
 Some Visual Basic 3.0 and 4.0 programs 
 ======================================= 
-by Joan Alba Maldonado (joanalbamaldonadoNO_SPAM_PLEASE AT gmail DOT com, without NO_SPAM_PLEASE)
+by [Joan Alba Maldonado](https://joanalbamaldonado.com/) (joanalbamaldonadoNO_SPAM_PLEASE AT gmail DOT com, without NO_SPAM_PLEASE)
 
 Some applications made with Microsoft Visual Basic 3.0 and 4.0.
 
